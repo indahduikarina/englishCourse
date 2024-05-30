@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Kosakata Bahasa Inggris</title>
+</head>
+<body>
+    <h1>Belajar Kosakata Bahasa Inggris</h1>
+    <p>Di sini kamu bisa memperkaya kosakata bahasa Inggris dengan cara yang menyenangkan!</p>
+
+    <!-- Tombol untuk menampilkan kosakata -->
+    <button onclick="tampilkanKosakata()">Tampilkan Kosakata</button>
+
+    <!-- Area untuk menampilkan kosakata -->
+    <div id="kosakataArea"></div>
+
+    <script>
+        // Daftar kosakata (ganti dengan kosakata sesuai kebutuhan)
+        const kosakata = [
+            'apple', 'banana', 'cat', 'dog', 'elephant', 'flower', 'grape', 'house'
+        ];
+
+        function tampilkanKosakata() {
+            const kosakataArea = document.getElementById('kosakataArea');
+            kosakataArea.innerHTML = ''; // Hapus konten sebelumnya
+
+            // Tampilkan kosakata secara acak
+            const randomIndex = Math.floor(Math.random() * kosakata.length);
+            const kata = kosakata[randomIndex];
+            kosakataArea.innerHTML = `<p>Kosakata hari ini: <strong>${kata}</strong></p>`;
+        }
+    </script>
+</body>
+</html>
